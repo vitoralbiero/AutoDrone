@@ -344,16 +344,16 @@ void trackObject(Mat &camera){
 				vector<Point>::iterator vertex;
 				vertex = approxRect.begin();
 				//vertex++;
-				circle(camera, *vertex, 2, Scalar(0, 0, 255), -1, 8, 0);
+				circle(camera, *vertex, 4, Scalar(180), -1, 8, 0);
 				corners.push_back(*vertex);
 				vertex++;
-				circle(camera, *vertex, 2, Scalar(0, 0, 255), -1, 8, 0);
+				circle(camera, *vertex, 4, Scalar(180), -1, 8, 0);
 				corners.push_back(*vertex);
 				vertex++;
-				circle(camera, *vertex, 2, Scalar(0, 0, 255), -1, 8, 0);
+				circle(camera, *vertex, 4, Scalar(180), -1, 8, 0);
 				corners.push_back(*vertex);
 				vertex++;
-				circle(camera, *vertex, 2, Scalar(0, 0, 255), -1, 8, 0);
+				circle(camera, *vertex, 4, Scalar(180), -1, 8, 0);
 				corners.push_back(*vertex);
 
 				Moments mu;
@@ -376,7 +376,7 @@ void trackObject(Mat &camera){
 				Mat transmtx = getPerspectiveTransform(corners, quad_pts);
 
 				// Apply perspective transformation
-				warpPerspective(camera, correctedImg, transmtx, correctedImg.size());
+				warpPerspective(greyImg, correctedImg, transmtx, correctedImg.size());
 
 				//Mat correctedImgBin;
 				Mat new_image;
