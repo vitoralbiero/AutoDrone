@@ -15,5 +15,3 @@ For that, just run "cmake" and "make" inside the objectTrack folder.
 
 The DroneControl code goes into an Arduino Uno, and it is wired to the Arduino Crius, which will control the Drone.
 The receptor is connected to the Arduino Uno, and the connection between the Raspberry Pi and the Arduino Uno is made using I2C.
-
-The diagrams for the connections will be posted soon.
